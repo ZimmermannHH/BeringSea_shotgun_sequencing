@@ -34,9 +34,9 @@ fastuniq -i samplename.list -t q -o samplename_dedup_R1.fastq -p samplename_dedu
 
 ## Data processing
 Trimming low quality ends and removing reads with low complexity, removal of residual adapters and merging of overlapping forward and reverse reads.
-
+Here is the link to the [fastp manual]() for further information.
 ```
-fastp --in1=forward.fastq --in2=reverse.fastq --out1=unmerged_forward.fastq --out2=unmerged_reverse.fastq \
+fastp --in1=samplename_dedup_R1.fastq --in2=samplename_dedup_R2.fastq --out1=unmerged_forward.fastq --out2=unmerged_reverse.fastq \
 --unpaired1=unpaired_forward.fastq --unpaired2=unpaired_reverse.fastq --merge \
 --merged_out=merged_samplename.fastq --failed_out=failed_samplename.fastq --thread=36 --verbose \
 --adapter_fasta=adapter_2020_04_06.fasta --length_required=30 --overlap_len_require=10 --overlap_diff_percent_limit=20 \
@@ -48,7 +48,7 @@ fastp --in1=forward.fastq --in2=reverse.fastq --out1=unmerged_forward.fastq --ou
 
 ## Taxonomic classification with kraken2
 
-[kraken2 manual](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown)
+Here is the link to the [kraken2 manual](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown) for further information.
 
 ### single-end mode for merged reads:
 ```
@@ -69,3 +69,5 @@ kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04
 ```
 
 ### Damage pattern analysis
+Here is the link to the [HOPS manual]() for further information.
+
