@@ -16,6 +16,7 @@ Overview of used programs, versions used for the analysis, and the link to the p
 |Fastp|0.20.0|[Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129281/)|
 |kraken2|2.0.8-beta|[Link](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0)|
 |HOPS|0.3.4|[Link](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1903-0#:~:text=HOPS%20is%20a%20versatile%20tool%20for%20high-throughput%20screening,enables%20large-scale%20metagenomic%20analyses%20of%20complex%20biological%20systems.)|
+|R|4.0.3||
 
 
 ---
@@ -59,7 +60,8 @@ kraken2-2.0.8-beta/kraken2 --conf=0.2 --db kraken2_db merged_samplename.fastq --
 ### paired-end mode for unmerged read pairs: 
 ```
 kraken2-2.0.8-beta/kraken2 --conf=0.2 --paired --db kraken2_db unmerged_forward.fastq \
-unmerged_reverse.fastq --threads 36 --report samplename_unmerged.report --output samplename_unmerged.kraken 
+unmerged_reverse.fastq --threads 36 --report samplename_unmerged.report \
+--output samplename_unmerged.kraken 
 ```
 
 ### Inspect the database for signal validation of the dominant fish families in our analysis
@@ -72,4 +74,24 @@ kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04
 
 ### Damage pattern analysis
 Here is the link to the [HOPS manual]() for further information.
+
+
+---
+# Data processing, filtering, compositional analysis and network analysis
+
+## Processing and filtering
+
+The following R-scripts are run in the order they are listed below. 
+
+1. Cleaning up the kraken2-output and filtering for family level with  `1_prep_famlevel.R`
+2. Making taxonomic subgroups based on manually checked taxa lists `2_prep_taxalists.R`
+3. Resampling of reads to account for differences in per sample read counts for pelagic taxa `3_resampling_plankton_pelagic.R` and benthic taxa `3_resampling_benthic.R`. This script is based on the github script by Stefan Kruse [R-rarefaction](https://github.com/StefanKruse/R_Rarefaction).
+4. for pelagic taxa `` and benthic taxa ``.
+5. ``
+6. ``
+7. ``
+8. ``
+
+## Network analysis
+
 
