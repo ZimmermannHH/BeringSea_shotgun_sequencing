@@ -8,8 +8,8 @@ The code to process the data is part of this README. Further data processing, fi
 
 
 
-Overview of used programs and versions
-|Program|Version|Link|
+Overview of used programs, versions used for the analysis, and the link to the publication
+|Program|Version|Link to publication|
 |-------|------|------|
 |FastQC|0.11.9|[Link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)|
 |FastUniq|1.1|[Link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0052249)|
