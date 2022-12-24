@@ -28,7 +28,9 @@ for i in *fastq.gz; do fastqc $i -t 4 -o fastqc_reports/; done
 ```
 
 ## Duplicate removal
-
+```
+fastuniq -i samplename.list -t q -o samplename_dedup_R1.fastq -p samplename_dedup_R2.fastq
+```
 
 ## Data processing
 Trimming low quality ends and removing reads with low complexity, removal of residual adapters and merging of overlapping forward and reverse reads.
