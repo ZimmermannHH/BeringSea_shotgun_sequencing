@@ -3,11 +3,28 @@ Scripts for the compositional analysis of metagenomic shotgun sequencing data ca
 
 Here, I provide the code that was used for the processing, filtering, and analysis of the metagenomic shotgun sequencing data of sedimentary ancient DNA from a marine sediment core from the Bering Sea. 
 
-## Qmuality check of sequencing data
+
+Overview of used programs and versions
+|Program|Version|
+|-------|------|
+|FastQC|0.11.9|
+|FastUniq|1.1|
+|Fastp|0.20.0|
+|kraken2|2.0.8-beta|
+|HOPS|0.3.4|
+
+
+---
+
+
+## Quality check of sequencing data
 
 ```
 for i in *fastq.gz; do fastqc $i -t 4 -o fastqc_reports/; done
 ```
+
+## Duplicate removal
+
 
 ## Data processing
 Trimming low quality ends and removing reads with low complexity, removal of residual adapters and merging of overlapping forward and reverse reads.
@@ -44,3 +61,5 @@ unmerged_reverse.fastq --threads 36 --report samplename_unmerged.report --output
 kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04_db  \
 --use-mpa-style >> ~/krakeninspectdb/kraken2-inspect_nt_2021_04_db.txt
 ```
+
+### Damage pattern analysis
