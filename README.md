@@ -4,6 +4,8 @@ Scripts for the compositional analysis of metagenomic shotgun sequencing data ca
 Here, I provide the code that was used for the processing, filtering, and analysis of the metagenomic shotgun sequencing data of sedimentary ancient DNA from a marine sediment core from the Bering Sea for the paper by Zimmermann et al. 2023. 
 
 The processing of the sequencing data and taxonomic classification were carried out on a HPC 
+The code to process the data is part of this README. Further data processing, filtering and the analysis of the data was carried out in `R`. The R-scripts are part of this repository and the README guides through the order of running them.
+
 
 
 Overview of used programs and versions
