@@ -62,7 +62,9 @@ kraken2-2.0.8-beta/kraken2 --conf=0.2 --paired --db kraken2_db unmerged_forward.
 unmerged_reverse.fastq --threads 36 --report samplename_unmerged.report --output samplename_unmerged.kraken 
 ```
 
-
+### Inspect the database for signal validation of the dominant fish families in our analysis
+To check whether correlations could be influenced by a reference data bias of closely related taxa, we inspected the our custom full-nt kraken database.
+Formal analysis was carried out afterwards using the R-script `fish_db_inspection.R`.
 ```
 kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04_db  \
 --use-mpa-style >> ~/krakeninspectdb/kraken2-inspect_nt_2021_04_db.txt
