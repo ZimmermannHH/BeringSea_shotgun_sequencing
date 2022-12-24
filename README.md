@@ -79,19 +79,16 @@ Here is the link to the [HOPS manual]() for further information.
 ---
 # Data processing, filtering, compositional analysis and network analysis
 
-## Processing and filtering
-
-The following R-scripts are run in the order they are listed below. 
+The following R-scripts and python-script are run in the order they are listed below. Input files for running the scripts are included in the folder Input_files.
 
 1. Cleaning up the kraken2-output and filtering for family level with  `1_prep_famlevel.R`
 2. Making taxonomic subgroups based on manually checked taxa lists `2_prep_taxalists.R`
 3. Resampling of reads to account for differences in per sample read counts for pelagic taxa `3_resampling_plankton_pelagic.R` and benthic taxa `3_resampling_benthic.R`. This script is based on the github script by Stefan Kruse [R-rarefaction](https://github.com/StefanKruse/R_Rarefaction).
-4. for pelagic taxa `` and benthic taxa ``.
+4. Compositional analysis, Spearman correlations, and network analysis for pelagic taxa `4_analysis_pelagic.R` and benthic taxa `4_analysis_benthic.R`.
 5. ``
 6. ``
 7. ``
 8. ``
 
-## Network analysis
 
 
