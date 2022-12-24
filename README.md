@@ -9,13 +9,13 @@ The code to process the data is part of this README. Further data processing, fi
 
 
 Overview of used programs and versions
-|Program|Version|
-|-------|------|
-|FastQC|0.11.9|
-|FastUniq|1.1|
-|Fastp|0.20.0|
-|kraken2|2.0.8-beta|
-|HOPS|0.3.4|
+|Program|Version|Link|
+|-------|------|------|
+|FastQC|0.11.9|[Link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)|
+|FastUniq|1.1|[Link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0052249)|
+|Fastp|0.20.0|[Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129281/)|
+|kraken2|2.0.8-beta|[Link](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0)|
+|HOPS|0.3.4|[Link](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1903-0#:~:text=HOPS%20is%20a%20versatile%20tool%20for%20high-throughput%20screening,enables%20large-scale%20metagenomic%20analyses%20of%20complex%20biological%20systems.)|
 
 
 ---
