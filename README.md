@@ -3,13 +3,13 @@ Scripts for the compositional analysis of metagenomic shotgun sequencing data ca
 
 Here, I provide the code that was used for the processing, filtering, and analysis of the metagenomic shotgun sequencing data of sedimentary ancient DNA from a marine sediment core from the Bering Sea. 
 
-##Quality check of sequencing data
+## Qmuality check of sequencing data
 
 ```
 for i in *fastq.gz; do fastqc $i -t 4 -o fastqc_reports/; done
 ```
 
-##Data processing
+## Data processing
 Trimming low quality ends and removing reads with low complexity, removal of residual adapters and merging of overlapping forward and reverse reads.
 
 ```
@@ -23,16 +23,17 @@ fastp --in1=forward.fastq --in2=reverse.fastq --out1=unmerged_forward.fastq --ou
 --cut_mean_quality=10 -q 10 -x 10
 ```
 
-##Taxonomic classification with kraken2
+## Taxonomic classification with kraken2
+
 [kraken2 manual](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown)
 
-#single-end mode for merged reads:
+### single-end mode for merged reads:
 ```
 kraken2-2.0.8-beta/kraken2 --conf=0.2 --db kraken2_db merged_samplename.fastq --threads 36 \
 --output samplename_merged.kraken --report samplename_merged.report
 ```
 
-#paired-end mode for unmerged read pairs: 
+### paired-end mode for unmerged read pairs: 
 ```
 kraken2-2.0.8-beta/kraken2 --conf=0.2 --paired --db kraken2_db unmerged_forward.fastq \
 unmerged_reverse.fastq --threads 36 --report samplename_unmerged.report --output samplename_unmerged.kraken 
