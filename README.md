@@ -75,6 +75,63 @@ kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04
 ### Damage pattern analysis
 Here is the link to the [HOPS manual]() for further information.
 
+```
+#!/bin/bash 
+
+#SBATCH --job-name=hops_nt_APMG689
+#SBATCH -p xfat
+#SBATCH --qos=large
+#SBATCH -t 96:00:00 
+#SBATCH --cpus-per-task=28
+#SBATCH --mail-type=ALL
+#SBATCH --mem=1400G 
+#SBATCH --error="hopsNT-%j.err"
+#SBATCH --out="hopsNT-%j.out"
+
+#####Author: Kathleen Stoof-Leichsenring
+
+# set variables (requires modification)
+#================================================
+WORKDIR=/shotgun/APMG689/hops/
+INPUT=/shotgun/APMG689/output/out.fastp/191011_SND405_A_L007_APMG-6-1_fastp_merged_R2.fq.gz
+OUTPUT=/shotgun/APMG689/hops/output/APMG-6-1
+CONFIG=/shotgun/APMG689/hops/configfile.txt
+INDEXDB=/db/hops/nt-hops-20-11-03_step8/
+TAXFILE=/shotgun/APMG689/hops/taxalist_2022_05_06.txt
+NCBIRESC=/db/hops/ncbi
+MEM=1400
+
+# preparing the working environment
+#================================================
+cd $WORKDIR
+module load bio/hops/0.34
+
+# create Hops config file
+#================================================
+echo "preProcess=0 
+alignment=1 
+dupRemOff=0 
+filter=def_anc 
+index=${INDEXDB}
+pathToList=${TAXFILE}
+resources=${NCBIRESC}
+
+useSlurm = 0
+threadsMalt=${SLURM_CPUS_PER_TASK}
+maxMemoryMalt=${MEM}
+
+threadsMaltEx=${SLURM_CPUS_PER_TASK}
+maxMemoryMaltEx=${MEM}
+
+threadsPost=${SLURM_CPUS_PER_TASK}
+maxMemoryPost=256" > ${CONFIG}
+
+# tasks to be performed
+#================================================
+
+srun hops -Xmx${MEM}G -input ${INPUT} -output ${OUTPUT} -m full -c ${CONFIG} 
+
+```
 
 ---
 # Data processing, filtering, compositional analysis and network analysis
