@@ -11,11 +11,11 @@ The code to process the data is part of this README. Further data processing, fi
 Overview of used programs, versions used for the analysis, and the link to the publication
 |Program|Version|Link to publication|
 |-------|------|------|
-|FastQC|0.11.9|[Link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)|
-|FastUniq|1.1|[Link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0052249)|
-|Fastp|0.20.0|[Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129281/)|
-|kraken2|2.0.8-beta|[Link](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0)|
-|HOPS|0.3.4|[Link](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1903-0#:~:text=HOPS%20is%20a%20versatile%20tool%20for%20high-throughput%20screening,enables%20large-scale%20metagenomic%20analyses%20of%20complex%20biological%20systems.)|
+|FastQC|0.11.9|[Andrews et al. 2010](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)|
+|FastUniq|1.1|[Xu et al. 2012](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0052249)|
+|Fastp|0.20.0|[Chen et al. 2018](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129281/)|
+|kraken2|2.0.8-beta|[Wood et al. 2019](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0)|
+|HOPS|0.3.4|[Hübler et al. 2019](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1903-0#:~:text=HOPS%20is%20a%20versatile%20tool%20for%20high-throughput%20screening,enables%20large-scale%20metagenomic%20analyses%20of%20complex%20biological%20systems.)|
 |R|4.0.3||
 
 
