@@ -143,7 +143,7 @@ The following R-scripts and python-script are run in the order they are listed b
 2. Making taxonomic subgroups based on manually checked taxa lists `2_prep_taxalists.R`
 3. Resampling of reads to account for differences in per sample read counts for pelagic taxa `3_resampling_plankton_pelagic.R` and benthic taxa `3_resampling_benthic.R`. This script is based on the github script by Stefan Kruse [R-rarefaction](https://github.com/StefanKruse/R_Rarefaction).
 4. Compositional analysis, stratigraphic diagrams, Spearman correlations, and network analysis for pelagic taxa `4_correlation_analysis_networks_plankton_pelagic.R` and benthic taxa `4_correlation_analysis_benthic.R`.
-5. ``
+
 
 
 
