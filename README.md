@@ -74,7 +74,7 @@ kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04
 
 ### Damage pattern analysis
 Here is the link to the [HOPS manual]() for further information.
-We prepared 3 datasets in which samples were binned according to their age to estimate whether damage patterns increase with time: set1 (), set2 (), set3 ().
+We prepared 3 datasets in which samples were binned according to their age to estimate whether damage patterns increase with time: set1 (1.08–5.6 ka), set2 (6.3–12.6 ka), set3 (13.6–19.9 ka). The samples were therefore concatenated using the `cat` command.
 
 ```
 #!/bin/bash 
@@ -142,11 +142,9 @@ The following R-scripts and python-script are run in the order they are listed b
 1. Cleaning up the kraken2-output and filtering for family level with  `1_prep_famlevel.R`
 2. Making taxonomic subgroups based on manually checked taxa lists `2_prep_taxalists.R`
 3. Resampling of reads to account for differences in per sample read counts for pelagic taxa `3_resampling_plankton_pelagic.R` and benthic taxa `3_resampling_benthic.R`. This script is based on the github script by Stefan Kruse [R-rarefaction](https://github.com/StefanKruse/R_Rarefaction).
-4. Compositional analysis, Spearman correlations, and network analysis for pelagic taxa `4_analysis_pelagic.R` and benthic taxa `4_analysis_benthic.R`.
+4. Compositional analysis, stratigraphic diagrams, Spearman correlations, and network analysis for pelagic taxa `4_correlation_analysis_networks_plankton_pelagic.R` and benthic taxa `4_correlation_analysis_benthic.R`.
 5. ``
-6. ``
-7. ``
-8. ``
+
 
 
 
