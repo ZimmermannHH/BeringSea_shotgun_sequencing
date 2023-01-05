@@ -64,6 +64,11 @@ unmerged_reverse.fastq --threads 36 --report samplename_unmerged.report \
 --output samplename_unmerged.kraken 
 ```
 
+### combining kraken2 outputs into a single file
+```
+awk  'BEGIN{FS=OFS="\t"} {print FILENAME, $0}' *0.2*report | awk 'BEGIN{FS=OFS="\t"} {gsub(/^[ \t]+/, "", $7)}1' > APMG689_nt0.2_Kraken2.txt
+```
+
 ### Inspect the database for signal validation of the dominant fish families in our analysis
 To check whether correlations could be influenced by a reference data bias of closely related taxa, we inspected the our custom full-nt kraken database.
 Formal analysis was carried out afterwards using the R-script `fish_db_inspection.R`.
