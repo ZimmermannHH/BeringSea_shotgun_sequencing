@@ -99,8 +99,8 @@ We prepared 3 datasets in which samples were binned according to their age to es
 # set variables (requires modification)
 #================================================
 WORKDIR=/shotgun/APMG689/hops/
-INPUT=/shotgun/APMG689/output/out.fastp/191011_SND405_A_L007_APMG-6-1_fastp_merged_R2.fq.gz
-OUTPUT=/shotgun/APMG689/hops/output/APMG-6-1
+INPUT=/shotgun/APMG689/output/out.fastp/set1.fastq.gz
+OUTPUT=/shotgun/APMG689/hops/output
 CONFIG=/shotgun/APMG689/hops/configfile.txt
 INDEXDB=/db/hops/nt-hops-20-11-03_step8/
 TAXFILE=/shotgun/APMG689/hops/taxalist_2022_05_06.txt
