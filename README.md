@@ -79,7 +79,7 @@ kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04
 
 ### Damage pattern analysis
 Here is the link to the [HOPS manual]() for further information.
-We prepared 3 datasets in which samples were binned according to their age to estimate whether damage patterns increase with time: set1 (1.08–5.6 ka), set2 (6.3–12.6 ka), set3 (13.6–19.9 ka). The samples were therefore concatenated using the `cat` command.
+We prepared 3 datasets in which samples were binned according to their age to estimate whether damage patterns increase with time: set1 (1.08–5.6 ka), set2 (6.3–12.6 ka), set3 (13.6–19.9 ka). The samples were concatenated using the `cat` command and the different datasets were processed after each other.
 
 ```
 #!/bin/bash 
