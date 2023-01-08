@@ -1,0 +1,18 @@
+preProcess=0 
+alignment=1 
+dupRemOff=0 
+filter=def_anc 
+index=/home/ollie/projects/bio/db/hops/nt-hops-20-11-03_step8/
+pathToList=/work/ollie/kstoof/shotgun/APMG689/hops/taxalist_HOPS_AMPG698.txt
+resources=/home/ollie/projects/bio/db/hops/ncbi
+
+useSlurm = 0
+threadsMalt=28
+maxMemoryMalt=1400
+
+threadsMaltEx=28
+maxMemoryMaltEx=1400
+
+threadsPost=28
+maxMemoryPost=256
+
