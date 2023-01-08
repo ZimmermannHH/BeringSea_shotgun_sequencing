@@ -82,21 +82,9 @@ Here is the link to the [HOPS manual]() for further information.
 We prepared 3 datasets in which samples were binned according to their age to estimate whether damage patterns increase with time: set1 (1.08–5.6 ka), set2 (6.3–12.6 ka), set3 (13.6–19.9 ka). The samples were concatenated using the `cat` command and the different datasets were processed after each other.
 
 ```
-#!/bin/bash 
-
-#SBATCH --job-name=hops_nt_APMG689
-#SBATCH -p xfat
-#SBATCH --qos=large
-#SBATCH -t 96:00:00 
-#SBATCH --cpus-per-task=28
-#SBATCH --mail-type=ALL
-#SBATCH --mem=1400G 
-#SBATCH --error="hopsNT-%j.err"
-#SBATCH --out="hopsNT-%j.out"
-
 #####Author: Lars Harms
 
-# set variables (requires modification)
+# set variables 
 #================================================
 WORKDIR=/shotgun/APMG689/hops/
 INPUT=/shotgun/APMG689/output/out.fastp/set1.fastq.gz
@@ -106,6 +94,7 @@ INDEXDB=/db/hops/nt-hops-20-11-03_step8/
 TAXFILE=/shotgun/APMG689/hops/taxalist_2022_05_06.txt
 NCBIRESC=/db/hops/ncbi
 MEM=1400
+cpus-per-task=28
 
 # preparing the working environment
 #================================================
@@ -148,6 +137,7 @@ The following R-scripts and python-script are run in the order they are listed b
 2. Making taxonomic subgroups based on manually checked taxa lists `2_prep_taxalists.R`
 3. Resampling of reads to account for differences in per sample read counts for pelagic taxa `3_resampling_plankton_pelagic.R` and benthic taxa `3_resampling_benthic.R`. This script is based on the github script by Stefan Kruse [R-rarefaction](https://github.com/StefanKruse/R_Rarefaction).
 4. Compositional analysis, stratigraphic diagrams, Spearman correlations, and network analysis for pelagic taxa `4_correlation_analysis_networks_plankton_pelagic.R` and benthic taxa `4_correlation_analysis_benthic.R`.
+5. We calculated ratios between pelagic and benthic taxa counts and between phototrophic bacteria and phototroophic protists using the script `ratio_plots.R`.
 
 
 
