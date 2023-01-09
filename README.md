@@ -79,7 +79,7 @@ kraken2-inspect --threads 36 --db /home/ollie/projects/bio/db/kraken2/nt_2021_04
 
 ### Damage pattern analysis
 Here is the link to the [HOPS manual]() for further information.
-We prepared 3 datasets in which samples were binned according to their age to estimate whether damage patterns increase with time: set1 (1.08–5.6 ka), set2 (6.3–12.6 ka), set3 (13.6–19.9 ka). The samples were concatenated using the `cat` command and the different datasets were processed after each other.
+We prepared 3 datasets in which samples were binned according to their age to estimate whether damage patterns increase with time: set1 (1.08–5.6 ka), set2 (6.3–12.6 ka), set3 (13.6–19.9 ka). The samples were concatenated using the `cat` command and the different datasets were processed after each other. The configuration file and the taxa list can be found in the folder Input_files/HOPS. 
 
 ```
 #####Author: Lars Harms
@@ -91,7 +91,7 @@ INPUT=/shotgun/APMG689/output/out.fastp/set1.fastq.gz
 OUTPUT=/shotgun/APMG689/hops/output
 CONFIG=/shotgun/APMG689/hops/configfile.txt
 INDEXDB=/db/hops/nt-hops-20-11-03_step8/
-TAXFILE=/shotgun/APMG689/hops/taxalist_2022_05_06.txt
+TAXFILE=/shotgun/APMG689/hops/taxalist_HOPS_APMG689.txt
 NCBIRESC=/db/hops/ncbi
 MEM=1400
 cpus-per-task=28
