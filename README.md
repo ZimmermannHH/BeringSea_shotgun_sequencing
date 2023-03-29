@@ -1,7 +1,7 @@
 # BeringSea_shotgun_sequencing
 Scripts for the compositional analysis of metagenomic shotgun sequencing data calssified by kraken2
 
-Here, I provide the code that was used for the processing, filtering, and analysis of the metagenomic shotgun sequencing data of sedimentary ancient DNA from a marine sediment core from the Bering Sea for the paper by Zimmermann et al. 2023. 
+Here, I provide the code that was used for the processing, filtering, and analysis of the metagenomic shotgun sequencing data of sedimentary ancient DNA from a marine sediment core from the Bering Sea for the paper by [Zimmermann et al.](https://www.nature.com/articles/s41467-023-36845-x) Marine ecosystem shifts with deglacial sea-ice loss inferred from ancient DNA shotgun sequencing. Nat Commun 14, 1650 (2023). https://doi.org/10.1038/s41467-023-36845-x
 
 The processing of the sequencing data and taxonomic classification were carried out on a HPC 
 The code to process the data is part of this README. Further data processing, filtering and the analysis of the data was carried out in `R`. The R-scripts are part of this repository and the README guides through the order of running them.
